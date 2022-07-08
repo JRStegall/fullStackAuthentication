@@ -11,10 +11,13 @@ async function dbConnect() {
                 useUnifiedTopology: true,
                 useCreateIndex: true,
             }
-        ).then(() => {
+    )
+        .then(() => {
             console.log("Successfully connected to MongoDB Atlas!");
-        }).catch((error) => {
+        })
+        .catch((error) => {
             console.log("Unable to connect to MongoDB Atlas!");
+            console.error(error);
         });
 }
 
