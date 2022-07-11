@@ -11,7 +11,7 @@ async function dbConnect() {
                 useUnifiedTopology: true,
                 useCreateIndex: true,
             }
-    )
+        )
         .then(() => {
             console.log("Successfully connected to MongoDB Atlas!");
         })
@@ -19,6 +19,6 @@ async function dbConnect() {
             console.log("Unable to connect to MongoDB Atlas!");
             console.error(error);
         });
+};
 
-
-module.exports = dbConnect;
+    module.exports = dbConnect;
